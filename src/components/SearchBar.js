@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-export const SearchBar = () => {
+export const SearchBar = (props) => {
     const [term, setTerm] = useState('');
 
     const handleInputChange = (e) => {
         setTerm(e.target.value);
-        console.log(term)
+        
     }
     const onFormSubmit = (e) => {
         e.preventDefault();
-
+        props.onFormSubmit(term);
         
     };
 
