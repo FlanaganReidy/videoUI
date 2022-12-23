@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {PUBLIC_API_KEY} from '../config/config';
+import config from '../config/config';
 
 export default axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3',
@@ -7,6 +7,6 @@ export default axios.create({
         part:'snippet',
         type: 'video',
         maxResults:'5',
-        key:PUBLIC_API_KEY
+        key:config.PUBLIC_API_Key
     }
 })
