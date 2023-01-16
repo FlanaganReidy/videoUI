@@ -1,12 +1,20 @@
 import React from "react";
+import './video.css';
 
-export const Video = ({videoId}) => {
+export const Video = ({videoInfo, onVideoSelect}) => {
+    
+    const handleClick = () => {
+        onVideoSelect(videoInfo);
+    }
+
     return(
-        <iframe src={`https://www.youtube.com/embed/${videoId}`}
-        frameborder='0'
-        allow='autoplay; encrypted-media'
-        allowfullscreen
-        title='video'
-/>
+        <div className="item video-item" onClick={handleClick} >
+            <img className="ui image" src={videoInfo.snippet.thumbnails.default.url}/>
+            <div className="content">
+                <div className="header">{videoInfo.snippet.title}</div>
+            </div>
+            
+        </div>
+        
     )
 }
