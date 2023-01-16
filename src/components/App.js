@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import youtube from '../apis/youtube';
+import { ActiveVideo } from "./ActiveVideo";
 import {SearchBar} from './SearchBar'
 import { VideoList } from "./VideoList";
 import { VideoDetail } from "./VideoDetail";
